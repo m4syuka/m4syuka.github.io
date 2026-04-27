@@ -17,7 +17,6 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: ru-RU  # изменил на русский
 title: "m4syuka"
-description: "Технологии и фотография"  # добавлено описание
 baseurl: ""  # важно: пустая строка, а не комментарий
 url: "https://m4syuka.github.io"  # убрал # и кавычки правильно
 logo: ""  # пока пусто, потом можно добавить /images/logo.png
