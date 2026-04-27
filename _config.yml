@@ -13,32 +13,31 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-#theme: jekyll-theme-so-simple
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
-locale: en-US
+locale: ru-RU  # изменил на русский
 title: "m4syuka"
-description: ""
-baseurl: # the subpath of your site, e.g. "/blog"
-url: https://m4syuka.github.io/# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
-date_format: "%B %-d, %Y"
-read_time: # reading time estimates, e.g. true
-words_per_minute: # 200
+description: "Технологии и фотография"  # добавлено описание
+baseurl: ""  # важно: пустая строка, а не комментарий
+url: "https://m4syuka.github.io"  # убрал # и кавычки правильно
+logo: ""  # пока пусто, потом можно добавить /images/logo.png
+date_format: "%d.%m.%Y"  # изменил на русский формат
+read_time: true  # включил
+words_per_minute: 200  # установил значение
 mathjax:
-  enable: # MathJax equations, e.g. true, false (default)
-  combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
-  tags:  # "none", "ams" (default), "all"
+  enable: false  # отключил, если не нужно
+  combo: "tex-svg"
+  tags: "none"
 google_fonts:
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+google_analytics: ""  # оставь пустым, если нет GA
 disqus:
-  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+  shortname: ""  # оставь пустым, если нет Disqus
 twitter:
-  username: # site's Twitter username, e.g. "mmistakes"
+  username: ""  # оставь пустым
 
 # Liquid
 liquid:
@@ -51,33 +50,33 @@ feed:
   path: atom.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 10
+# paginate: 10  # раскомментируй, когда будет больше 10 постов
 # paginate_path: /page:num/
 
 # Search
-search_full_content: false # can have performance implications for large sites
+search_full_content: false
 
 # Taxonomy pages
 # category_archive_path: "/categories/#"
 # tag_archive_path: "/tags/#"
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
+# ⚠️ ВАЖНО: добавлен плагин jekyll-remote-theme
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-remote-theme  # ← ЭТОТ ПЛАГИН БЫЛ ОТСУТСТВУЕТ!
 
 # Front Matter Defaults
 defaults:
@@ -91,14 +90,13 @@ defaults:
 
 # Site Author
 author:
-  name:
-  picture:
-  email:
-  twitter:
+  picture: ""
+  email: ""
+  twitter: ""
   links:
-    - title:
-      url:
-      icon:
+    - title: "Telegram"
+      url: "https://t.me/m4syuka"  # замени на свой
+      icon: "fab fa-telegram"
 
 # Footer Links
 footer_links:
