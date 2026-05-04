@@ -102,3 +102,11 @@ footer_links:
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
+
+
+# Navigation menu
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Tags"
+    url: "/tags/"
