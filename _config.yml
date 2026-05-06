@@ -19,7 +19,7 @@ locale: ru-RU  # изменил на русский
 title: "m4syuka"
 baseurl: ""  # важно: пустая строка, а не комментарий
 url: "https://m4syuka.github.io"  # убрал # и кавычки правильно
-logo: ""  # пока пусто, потом можно добавить /images/logo.png
+logo: "/images/avatar.jpg"  # пока пусто, потом можно добавить /images/logo.png
 date_format: "%d.%m.%Y"  # изменил на русский формат
 read_time: true  # включил
 words_per_minute: 200  # установил значение
@@ -110,3 +110,6 @@ navigation:
     url: "/"
   - title: "Tags"
     url: "/tags/"
+
+excerpt_length: 1
+read_more: "Читать далее →"
