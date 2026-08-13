@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просто блог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <header>
+        <div class="header-content">
+            <h1>// Просто блог //</h1>
+            
+            <button id="mode-toggle">Переключить на ЧЁРНЫЙ режим</button>
+        </div>
+    </header>
+
+    <nav class="tags-nav">
+        <strong>Фильтр по тегам:</strong><br><br>
+        <button class="tag-btn active" data-tag="all">ВСЕ ПОСТЫ</button>
+        <button class="tag-btn" data-tag="программирование">Программирование</button>
+        <button class="tag-btn" data-tag="javascript">JavaScript</button>
+    </nav>
+
+    <main>
+        <div class="post-list" id="post-list">
+            
+            <!-- Пост 2 -->
+            <div class="post-card" data-tags="программирование,javascript,web1.0">
+                <div class="post-date">13 августа 2026</div>
+                <h2><a href="posts/2026-08-13-sozdanie-bloga.html">Как я сделал этот блог в стиле Web 1.0</a></h2>
+                <p class="excerpt">Никаких фреймворков. Только HTML, CSS и немного JS. Почему я выбрал именно такой подход в 2025 году.</p>
+                <div class="tags">
+                    <span class="tag">#программирование</span>
+                    <span class="tag">#javascript</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Сайт сделан в стиле старого доброго веба • Все посты — отдельные HTML-файлы • 
+        <p class="footer-note">© 2025 • Просто блог</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

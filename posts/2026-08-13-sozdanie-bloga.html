@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание блога в стиле Web 1.0 — Просто блог</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="light">
+    <header>
+        <div class="header-content">
+            <h1><a href="../index.html" style="text-decoration:none;color:inherit;">// Просто блог //</a></h1>
+            <button id="mode-toggle">Переключить на ЧЁРНЫЙ режим</button>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Как я сделал этот блог в стиле Web 1.0</h2>
+            <p><strong>13 августа 2026</strong></p>
+            <p>В эпоху React, Next.js и Tailwind я решил сделать блог максимально просто и атмосферно. Никаких сборщиков, никаких фреймворков. Только <code>index.html</code>, <code>style.css</code> и <code>script.js</code>.</p>
+            
+            <h3>Технические решения:</h3>
+            <ul>
+                <li>Каждый пост — отдельный HTML-файл в папке <code>posts/</code></li>
+                <li>Переключение светлый/тёмный режим через CSS-классы</li>
+                <li>Фильтрация по тегам на чистом JavaScript</li>
+                <li>Максимально «бумажный» и «терминальный» вид</li>
+            </ul>
+            
+            <p>Это одновременно и дань уважения раннему вебу, и попытка сосредоточиться на контенте, а не на технологиях. Когда пишешь пост в таком стиле, чувствуешь себя ближе к сути.</p>
+            
+            <p>В будущем планирую добавить простую систему шаблонов для LLM, чтобы быстро генерировать новые посты по переданному .md-тексту.</p>
+        </article>
+        
+        <div class="tags" style="margin-top:50px">
+            <span class="tag">#программирование</span>
+            <span class="tag">#javascript</span>
+        </div>
+        
+        <p style="margin-top:60px">
+            <a href="../index.html">← Вернуться на главную</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>Просто блог • Пост написан вручную в стиле Web 1.0</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
