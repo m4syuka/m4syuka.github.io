@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Печатные платы на 3D-принтере — Просто блог</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="light">
+    <header>
+        <div class="header-content">
+            <h1><a href="../index.html" style="text-decoration:none;color:inherit;">// Просто блог //</a></h1>
+            <button id="mode-toggle">Переключить на ЧЁРНЫЙ режим</button>
+        </div>
+    </header>
+    
+    <main>
+        <article>
+        <h2>Автоматическая крутилка для советского фотобочка. Печатные платы на 3D-принтере</h2>
+        <p><strong>14 августа 2026</strong></p>
+        
+        <p>Процесс проявки фотопленки во многом длительный процесс. Особенно, когда занимаешься пушем.</p>
+        <p>Чтобы не корпеть каждый раз над фотобочком, решил сделать автоматическую крутилку для него.</p>
+        
+        <h2>Акт 1. Печатные платы</h2>
+        
+        <p>Навесной способ печати — не круто, а ЛЗУ использовать не могу, т.к. у меня нету лазерного принтера.</p>
+        <p>Да, можно использовать метод фоторезиста, но к нему нужна прозрачная пленка и др.</p>
+        <p>Я видел в интернете видео[1], как используют для создания печатной платы 3Д принтер. Попробуем и мы.</p>
+        
+        <h3>Глава 1. Плата для энкодера</h3>
+        
+        <p>В качестве тренировки попробуем развести плату для энкодера с внешней подтяжкой.<br>
+        За основу возьмем схему от Алекса Гавера[2].</p>
+        
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/1.jpg" alt="Принципиальная схема подключения энкодера с внешней подтяжкой" style="max-width:100%; height:auto;">
+        
+        <p>Получилось что-то типа:</p>
+        
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/2.jpg" alt="Плата энкодера версия" style="max-width:100%; height:auto;">
+        
+        <p>Расставим компоненты и выполним трассировку:<br>
+        <strong>Важно</strong> — необходимо зарание определиться с толщиной дорожек и отверстий, которые Ваш принтер может напечатать.<br>
+        В моем случае:</p>
+        <ul>
+            <li>Толщина дорожек — 2 мм</li>
+            <li>Диаметр отверстий — 1.5 мм</li>
+        </ul>
+        
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/3.jpg" alt="Расстановка компонентов и Трассировка" style="max-width:100%; height:auto;">
+        
+        <p>Экспортируем печатную плату с настройками как на картинке:</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/4.jpg" alt="Настройки экспорта печатной платы" style="max-width:100%; height:auto;">
+        
+        <p>3Д модель:</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/5.jpg" alt="3D модель платы" style="max-width:100%; height:auto;">
+        
+        <p>Выберем дорожки и вытянем их на 0.3 мм</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/6.jpg" alt="Вытягивание дорожек на 0.3 мм" style="max-width:100%; height:auto;">
+        
+        <p>Отправляем на печать...</p>
+        
+        <p>В результате у нас получается такая плата:</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/7.jpg" alt="Напечатанная плата" style="max-width:100%; height:auto;">
+        
+        <p>Наклеим на неё медный скотч и обрежем его по «дорожкам»</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/8.jpg" alt="Медный скотч на плате" style="max-width:100%; height:auto;">
+        
+        <p>Вставим элементы и спаяем их</p>
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/9.jpg" alt="Спаянная плата (вид 1)" style="max-width:100%; height:auto;">
+        <img src="../images/2026-08-14-pechatnye-platy-na-3d-printere/10.jpg" alt="Спаянная плата (вид 2)" style="max-width:100%; height:auto;">
+        
+        <h3>Печатная плата готова!!!</h3>
+        
+        <h2>Итог</h2>
+        <p>Как альтернативный способ создания ПП — пойдет. Очевидный минус данного способа — низкая разрешающая способность (во всяком случае на моем принтере) и низкая теплоотдача. Из плюсов могу отметить простоту и возможность создавать двусторонние[3] печатные платы.</p>
+        
+        <p>Как говорится «каждому свое»...<br>
+        Лично я в данном проекте буду продолжать использовать данный способ.</p>
+        
+        <h2>Примечания</h2>
+        <ol>
+            <li><a href="https://www.youtube.com/watch?v=PLliKgzKKUI" target="_blank">Видео про создание печатных плат с помощью 3D-принтера</a></li>
+            <li><a href="https://alexgyver.ru/lessons/encoder/" target="_blank">Схема от Алекса Гавера</a></li>
+            <li><a href="https://www.youtube.com/shorts/n1hmLTH086A" target="_blank">Пример двусторонней платы</a></li>
+        </ol>
+        
+        <div class="tags" style="margin-top:50px">
+            <span class="tag">#diy</span>
+            <span class="tag">#3dprint</span>
+            <span class="tag">#печатныеплаты</span>
+            <span class="tag">#электроника</span>
+        </div>
+    </article>
+    
+        <p style="margin-top:60px">
+            <a href="../index.html">← Вернуться на главную</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>Просто блог • Пост написан вручную в стиле Web 1.0</p>
+    </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>
