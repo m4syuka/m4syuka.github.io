@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Секретное место — Просто блог</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="light">
+    <header>
+        <div class="header-content">
+            <h1><a href="../index.html" style="text-decoration:none;color:inherit;">// Просто блог //</a></h1>
+            <button id="mode-toggle">Переключить на ЧЁРНЫЙ режим</button>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Как ты тут оказался? Ты infected?</h2>
+
+            <table class="tools-table">
+                <tbody>
+                    <tr class="tool-row" tabindex="0" aria-label="Показать название и ссылку">
+                        <td>Название тулзы</td>
+                        <td><button type="button" class="copy-link" data-link="aHR0cHM6Ly9leGFtcGxlLmNvbS90b29sLnppcA==" aria-label="Скопировать ссылку">ссылка</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <p style="margin-top:60px">
+            <a href="../index.html">← Вернуться на главную</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>Просто блог • Секретное место</p>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function decodeLink(encoded) {
+            return atob(encoded);
+        }
+
+        async function copyText(text) {
+            if (navigator.clipboard) {
+                try {
+                    await navigator.clipboard.writeText(text);
+                    return;
+                } catch (e) {
+                    // нет разрешения — пробуем старый способ ниже
+                }
+            }
+            const field = document.createElement('textarea');
+            field.value = text;
+            field.style.position = 'fixed';
+            field.style.opacity = '0';
+            document.body.appendChild(field);
+            field.select();
+            const copied = document.execCommand('copy');
+            field.remove();
+            if (!copied) throw new Error('copy failed');
+        }
+
+        document.querySelectorAll('.tool-row').forEach(row => {
+            const reveal = () => row.classList.add('revealed');
+            row.addEventListener('click', reveal);
+            row.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    reveal();
+                }
+            });
+        });
+
+        document.querySelectorAll('.copy-link').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                try {
+                    await copyText(decodeLink(btn.dataset.link));
+                    btn.textContent = 'скопировано';
+                    setTimeout(() => { btn.textContent = 'ссылка'; }, 1500);
+                } catch (e) {
+                    btn.textContent = 'не вышло :(';
+                    setTimeout(() => { btn.textContent = 'ссылка'; }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

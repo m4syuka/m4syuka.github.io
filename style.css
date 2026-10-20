@@ -171,6 +171,77 @@ article img {
 .light article img { border-color: #222; }
 .dark article img { border-color: #ccc; }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+}
+
+th, td {
+    border: 3px solid;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+th {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.light th, .light td { border-color: #222; }
+.dark th, .dark td { border-color: #ccc; }
+
+.light th { background: #eee; }
+.dark th { background: #222; }
+
+td a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.tool-row {
+    cursor: pointer;
+}
+
+.tool-row td {
+    transition: filter 0.15s;
+}
+
+.tool-row:not(.revealed) td {
+    filter: blur(6px);
+    user-select: none;
+}
+
+.tool-row:not(.revealed) .copy-link {
+    pointer-events: none;
+}
+
+.tool-row.revealed {
+    cursor: default;
+}
+
+.copy-link {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.copy-link:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
 pre {
     background: #000;
     color: #0f0;
